@@ -80,8 +80,7 @@
 <p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/419843100d36f3b2bd2c77a0e1f2e1e6/raw/86596385a4b6ad6ddcb7b50acc9e0114067c76b2/hw1.py">課程隨堂練習</a></p>
 <p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/5d7afcc6e89a5a0c267fd6c577f0ef3b/raw/7b8509411440f65f891190d0dce552a86f7a634d/%25E9%259A%258B%25E5%25A0%2582.py">圖框</a></p>
 <h3>w12</h3>
-<h3>w13</h3>
-<p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/54482da8f65dc3f282ca78e1deeaa4de/raw/c9ad06b631a4f5adb436db0c207192886856810e/%25E5%2585%25A9%25E5%2580%258B%25E6%2596%25B9%25E6%25A1%2586.py">課堂練習:兩個方框</a></p><h3>w13_hw</h3>
+<h3>w13_hw</h3>
 <p></p>
 <p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/f81c3349e07dfcfbdb08063837cb908f/raw/2fae23a8c9fcecef6d8f89bf64cc74935bafb421/%25E7%2584%25A1%25E7%25B6%25B2%25E6%25A0%25BC%25E6%2596%25B9%25E6%25A1%2586.py">兩個方框</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
@@ -111,10 +110,46 @@ for i in range(width):
        ctx.lineWidth = 1
        ctx.strokeStyle = 'red'
        ctx.beginPath();
-       ctx.rect(0,0,200,200, gs)
-       ctx.rect(100,100,200,200, gs)
+       ctx.rect(0,0,200,200, gs) #繪製第一個正方形
+       ctx.rect(100,100,200,200, gs) #繪製第二個正方形
        ctx.stroke();</pre>
-<p></p><h1>HW 2</h1>
+<p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/4c88348eb9568e3969affbfacb35cb80/raw/330fbad4b23a23c12fc011dffd1015fcc6d165e0/%25E5%2585%25A9%25E5%2580%258B%25E6%2596%25B9%25E6%25A1%2586%25E5%258F%258A%25E5%25A4%2596%25E5%2588%2587%25E5%259C%2593.py"><br/>含外切圓的方框<br/></a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+# 設置畫布
+canvas = html.CANVAS(width=600, height=600)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+ctx = canvas.getContext("2d")
+ctx.lineWidth = 1
+
+# 畫兩個矩形 (紅色邊框)
+ctx.strokeStyle = 'red'
+ctx.beginPath()
+ctx.rect(100, 100, 200, 200) #第一個正方形
+ctx.rect(200, 200, 200, 200) #第二個正方形
+ctx.stroke()
+
+# 畫對角線 (藍色)
+ctx.strokeStyle = 'blue'
+ctx.beginPath()
+ctx.moveTo(100, 100)
+ctx.lineTo(300, 300)
+ctx.stroke()
+
+# 畫兩個圓形 (黑色)
+ctx.strokeStyle = 'black'
+ctx.beginPath()
+ctx.arc(200, 200, 141.4, 0, 2 * 3.14) #(X座標,Y座標,半徑,起始角度,圓弧結束的角度)
+ctx.stroke()
+ctx.beginPath()
+ctx.arc(300, 300, 141.4, 0, 2 * 3.14)#(X座標,Y座標,半徑,起始角度,圓弧結束的角度)
+ctx.stroke()</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/4c88348eb9568e3969affbfacb35cb80/raw/330fbad4b23a23c12fc011dffd1015fcc6d165e0/%25E5%2585%25A9%25E5%2580%258B%25E6%2596%25B9%25E6%25A1%2586%25E5%258F%258A%25E5%25A4%2596%25E5%2588%2587%25E5%259C%2593.py"><br/><br/></a></p>
+<h3>w14_ex</h3>
+<h1>HW 2</h1>
 <p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; d3c69b043ceec42d4713b93ddcbbe13288908d1a</p>
 <h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 2 and Part 3</p>
