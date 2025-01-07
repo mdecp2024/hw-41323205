@@ -209,7 +209,31 @@ print (house)
 
 del house #刪除“房子”
 print (house)</pre>
-<p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/ce397208b6d7e5fe7da65665ebba1417/raw/1b506b9ef4ffea19596fdcf07b7d3b88c86febbb/w12%2520hw%25207">程式示範</a></p><h3>w13_hw</h3>
+<p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/ce397208b6d7e5fe7da65665ebba1417/raw/1b506b9ef4ffea19596fdcf07b7d3b88c86febbb/w12%2520hw%25207">程式示範</a></p>
+<p></p>
+<p>題目九：For loop with if... == ... / else</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">animals = ["giraffe", "penguin", "dolphin"] #[‘長頸鹿’、‘企鵝’、‘海豚’]
+print (animals)
+
+# for each position in the list
+for i in range (0, len(animals)):
+    print ("-- Beginning of loop --")
+    # print each element and its position
+    print ("The element in position " + str(i) + " is " + animals[i])
+    
+    wanted_to_see = "penguin"  #你真的很想看企鵝
+    
+    # for each position in the list
+for i in range (0, len(animals)):
+    # if the current animal is what you really wanted to see
+    if animals[i] == wanted_to_see:
+        # print out that that's the animal you really wanted to see
+        print ("I saw a " + animals[i] + " and I really wanted to see it!")
+    # if the current animal is not what you really wanted to see
+    else:
+        # just print out that you saw it
+        print ("I saw a " + animals[i])</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/e7ffa40ab164aa3d9e5d09f845942bd5/raw/715503833dd7852966b2ffcdf0818b72a8ed1079/w12%2520hw%25209">程式示範</a></p><h3>w13_hw</h3>
 <p></p>
 <p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/f81c3349e07dfcfbdb08063837cb908f/raw/2fae23a8c9fcecef6d8f89bf64cc74935bafb421/%25E7%2584%25A1%25E7%25B6%25B2%25E6%25A0%25BC%25E6%2596%25B9%25E6%25A1%2586.py">兩個方框</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
@@ -640,6 +664,7 @@ if __name__ == "__main__":
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 4 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
 <h3>w16_exam3</h3>
 <p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/736f6b7e1a17aebe0fda2c0d9ffa7b1c/raw/6aa58bdb27b896017571539088ae4619153af174/w16%2520Exam%25203">題目三</a></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Z0EFce7fWD0" width="560"></iframe></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
 import math

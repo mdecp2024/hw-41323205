@@ -209,7 +209,133 @@ print (house)
 
 del house #刪除“房子”
 print (house)</pre>
-<p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/ce397208b6d7e5fe7da65665ebba1417/raw/1b506b9ef4ffea19596fdcf07b7d3b88c86febbb/w12%2520hw%25207">程式示範</a></p><h3>w13_hw</h3>
+<p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/ce397208b6d7e5fe7da65665ebba1417/raw/1b506b9ef4ffea19596fdcf07b7d3b88c86febbb/w12%2520hw%25207">程式示範</a></p>
+<p></p>
+<p>題目八：for ... in range() / <span>對於...在範圍內（）</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#以下是我的朋友名單和他們最喜歡的菜餚清單
+
+friends = ["Geetha", "Luca", "Daisy", "Juhan"]
+dishes  = ["sushi", "burgers", "tacos", "pizza"]
+
+#這些都是我的朋友
+
+print ("My friends' names are:")
+print (friends)
+
+#這些是我的朋友
+
+for index in range (0,4):
+    print ("index:  " + str(index))
+    print ("friend: " + friends[index])
+    
+#這些都是他們最喜歡的菜
+
+print ("Their favorite dishes are:")
+print (dishes)
+
+#這些是他們最喜歡的菜餚
+
+for index in range (0,4):
+    print ("index:  " + str(index))
+    print ("dish: " + dishes[index])
+    
+#這些是我的朋友們，列出了他們最喜歡的菜餚
+
+for index in range (0,4):
+    print ("My friend " + friends[index] + "'s favorite dish is " + dishes[index])</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/b709fd030b28e06473b3857f78b1ece7/raw/a8da3e2c2603a509defc27fe97c6deb83281f3db/w12%2520hw%25208">程式示範</a></p>
+<p></p>
+<p>題目九：For loop with if... == ... / else</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">animals = ["giraffe", "penguin", "dolphin"] #[‘長頸鹿’、‘企鵝’、‘海豚’]
+print (animals)
+
+# for each position in the list
+for i in range (0, len(animals)):
+    print ("-- Beginning of loop --")
+    # print each element and its position
+    print ("The element in position " + str(i) + " is " + animals[i])
+    
+    wanted_to_see = "penguin"  #你真的很想看企鵝
+    
+    # for each position in the list
+for i in range (0, len(animals)):
+    # if the current animal is what you really wanted to see
+    if animals[i] == wanted_to_see:
+        # print out that that's the animal you really wanted to see
+        print ("I saw a " + animals[i] + " and I really wanted to see it!")
+    # if the current animal is not what you really wanted to see
+    else:
+        # just print out that you saw it
+        print ("I saw a " + animals[i])</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/e7ffa40ab164aa3d9e5d09f845942bd5/raw/715503833dd7852966b2ffcdf0818b72a8ed1079/w12%2520hw%25209">程式示範</a></p>
+<p></p>
+<p>題目十：For loop for searching / 用於搜尋的 For 迴圈</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#誰沒有一個凌亂的抽屜？這是我們的！它包含一些配件
+accessories = ["belt", "hat", "gloves", "sunglasses", "ring"]
+print (accessories)
+
+#將所有配件一一列印出來，以及它們在清單中的位置。使用類似元素 x 位於位置 y 的句子
+# for each position in the list
+for i in range (len(accessories)):
+    #print each elements and its position
+    print ("The element "  + accessories[i] + " is in position " + str(i))
+    
+    #列印名稱由6個字元組成的配件及其在清單中的位置。使用這樣的句子：元素 x 位於位置 y 並且它有 n 個字元
+    # for each position in the list
+for i in range (len(accessories)):
+    # if the length of the element equals 6
+    if len(accessories[i]) == 6:
+        # print the element, its position, and its number of characters
+        print ("The element " + accessories[i] + " is in position " + str(i) + " and it has 6 characters")
+        
+        #列印名稱少於6個字元的配件
+        # for each position in the list
+for i in range (len(accessories)):
+    # if the length of the element is less than 6
+    if len(accessories[i]) &lt; 6:
+        # print the element, its position, and its number of characters
+        print ("The element " + accessories[i] + " is in position " + str(i) + " and it has less than 6 characters")
+        
+        #列印名稱超過6個字元的配件。另外，將 6 賦給一個變數
+        # defining the threshold
+n_of_characters = 6 
+# for each position in the list 
+for i in range (len(accessories)):
+    # if the length of the element is greater than the threshold
+    if len(accessories[i]) &gt; n_of_characters:
+        # print the element, its position, and its number of characters
+        print ("The element " + accessories[i] + " is in position " + str(i) + " and it has more than " + str(n_of_characters) + " characters")
+        
+        #列印名稱由非6個字元組成的配件
+        # defining the threshold
+n_of_characters = 6 
+# for each position in the list 
+for i in range (len(accessories)):
+    # if the length of the element is not equal to the threshold
+    if len(accessories[i]) != n_of_characters:
+        # print the element, its position, and its number of characters
+        print ("The element " + accessories[i] + " is in position " + str(i) + " and it has a number of characters different from " + str(n_of_characters))
+        
+        #列印位置小於等於2的配件
+        # defining the threshold
+position = 2 
+# for each position in the list 
+for i in range (len(accessories)):
+    # if the position of the element is less then or equal to to the threshold
+    if i &lt;= position:
+        # print the element, its position, and its position characteristic
+        print ("The element " + accessories[i] + " is in position " + str(i) + ", which is less than or equal to " + str(position))
+        
+        #列印位置至少為2的配件
+        # defining the threshold
+position = 2 
+# for each position in the list 
+for i in range (len(accessories)):
+    # if the position of the element is greater then or equal to to the threshold
+    if i &gt;= position:
+        # print the element, its position, and its position characteristic
+        print ("The element " + accessories[i] + " is in position " + str(i) + ", which is at least " + str(position))</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/20ff4b9746dee4286ffe639f9d7a6b47/raw/f3250249ec5ca65baa71205ab406e8604b883c84/w12%2520hw%252010">程式示範</a></p><h3>w13_hw</h3>
 <p></p>
 <p><a href="https://mdecp2024.github.io/hw-41323205/content/Brython.html?src=https://gist.githubusercontent.com/41323205/f81c3349e07dfcfbdb08063837cb908f/raw/2fae23a8c9fcecef6d8f89bf64cc74935bafb421/%25E7%2584%25A1%25E7%25B6%25B2%25E6%25A0%25BC%25E6%2596%25B9%25E6%25A1%2586.py">兩個方框</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
